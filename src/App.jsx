@@ -27,7 +27,7 @@ function App() {
         {typeof weatherData.main === "undefined" ? (
           <div className="empty">
             <div className="name">
-              <h1>Your Reliable Weather App</h1>
+              <h1>Your Reliable <span>Weather</span> App</h1>
             </div>
 
             <div className="search">
@@ -42,7 +42,7 @@ function App() {
         ) : (
           <div>
             <div className="name">
-              <h1>Your Reliable Weather App</h1>
+              <h1>Your Reliable <span>Weather</span> App</h1>
             </div>
 
             <div className="search">
@@ -64,13 +64,13 @@ function App() {
               <div className="sp">
                 <h2>
                   <FaTemperatureHigh />{" "}
-                  {Math.round(weatherData.main.feels_like)}°C Feel
+                  {Math.round(weatherData.main.feels_like)}°C <span>Feel</span>
                 </h2>
               </div>
 
               <div className="sp">
                 <h2>
-                  <BiWind /> {weatherData.wind.speed} Speed
+                  <BiWind /> {weatherData.wind.speed}  <span>Speed</span>
                 </h2>
               </div>
             </div>
