@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { FaTemperatureHigh } from "react-icons/fa";
 import { TiWeatherCloudy } from "react-icons/ti";
+import { BiWind } from "react-icons/bi";
 
 function App() {
   const [weatherData, setWeatherData] = useState({});
@@ -22,44 +23,55 @@ function App() {
 
   return (
     <div className="wrapper">
-      <div className="name">
-        <h1>Your Reliable Weather App</h1>
-      </div>
-
-      <div className="search">
-        <input
-          placeholder="Search City..."
-          value={city}
-          onChange={(event) => setCity(event.target.value)}
-          onKeyPress={getWeather}
-        />
-      </div>
-
       <div className="info">
         {typeof weatherData.main === "undefined" ? (
           <div className="empty">
-            <p>Discover any location's weather.</p>
+            <div className="name">
+              <h1>Your Reliable Weather App</h1>
+            </div>
+
+            <div className="search">
+              <input
+                placeholder="Search City..."
+                value={city}
+                onChange={(event) => setCity(event.target.value)}
+                onKeyPress={getWeather}
+              />
+            </div>
           </div>
         ) : (
           <div>
+            <div className="name">
+              <h1>Your Reliable Weather App</h1>
+            </div>
+
+            <div className="search">
+              <input
+                placeholder="Search City..."
+                value={city}
+                onChange={(event) => setCity(event.target.value)}
+                onKeyPress={getWeather}
+              />
+            </div>
             <div className="up">
               <h2>{weatherData.name}</h2>
+
               <h2>{Math.round(weatherData.main.temp)}°C</h2>
+
+              <h2>{weatherData.weather[0].main}</h2>
             </div>
             <div className="bottom">
-              <div>
+              <div className="sp">
                 <h2>
                   <FaTemperatureHigh />{" "}
-                  {Math.round(weatherData.main.feels_like)}°C
+                  {Math.round(weatherData.main.feels_like)}°C Feel
                 </h2>
-                <span>Real Feel</span>
               </div>
 
-              <div>
+              <div className="sp">
                 <h2>
-                  <TiWeatherCloudy /> {weatherData.weather[0].main}
+                  <BiWind /> {weatherData.wind.speed} Speed
                 </h2>
-                <span>Weather </span>
               </div>
             </div>
           </div>

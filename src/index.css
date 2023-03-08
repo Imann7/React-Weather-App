@@ -6,6 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #1e1e20;
+  background-image: url("https://images.pexels.com/photos/773953/pexels-photo-773953.jpeg ");
+overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -19,18 +24,19 @@ code {
   display: inline-block;
   width: 600px;
   height: 600px;
-  background-color: white;
+  background-color: #1e1e20;
   padding: 40px;
-  margin-top: 20%;
+  margin-top: 5%;
   border-radius: 60px;
+  color: #e5e5e5;
 }
 
 .name {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #1e1e20;
-  margin-bottom: 20px;
+  color:#e5e5e5;
+  margin-bottom: 10px;
 }
 
 .search {
@@ -40,7 +46,7 @@ code {
 }
 
 .info {
-  margin-top: 20px;
+  
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -65,8 +71,8 @@ input {
 }
 
 .bottom {
-  display: flex;
-  flex-direction: row;
+ display: flex;
+ 
 
   justify-content: space-between;
   padding: 20px;
@@ -77,9 +83,15 @@ input {
 span {
   opacity: 0.7;
   font-weight: 700;
+  
+  
+  
 }
 
 .empty {
   display: inline;
   margin-top: 20%;
+}
+.sp{
+  opacity: 0.5;
 }
