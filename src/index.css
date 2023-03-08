@@ -22,7 +22,7 @@ code {
 
 .wrapper {
   display: inline-block;
-  width: 600px;
+  width: 650px;
   height: 600px;
   background-color: #1e1e20;
   padding: 40px;
@@ -83,6 +83,7 @@ input {
 span {
   opacity: 0.5;
   font-weight: 700;
+  font-size: 20px;
   
   
   
@@ -90,5 +91,11 @@ span {
 
 .empty {
   display: inline;
-  margin-top: 20%;
+  margin-top: 25%;
+}
+
+.about{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }

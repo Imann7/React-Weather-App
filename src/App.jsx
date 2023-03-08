@@ -27,7 +27,7 @@ function App() {
         {typeof weatherData.main === "undefined" ? (
           <div className="empty">
             <div className="name">
-              <h1>Your Reliable <span>Weather</span> App</h1>
+              <h1>Your Reliable Weather App</h1>
             </div>
 
             <div className="search">
@@ -38,11 +38,12 @@ function App() {
                 onKeyPress={getWeather}
               />
             </div>
+            <p className="about">Discover any location weather...</p>
           </div>
         ) : (
           <div>
             <div className="name">
-              <h1>Your Reliable <span>Weather</span> App</h1>
+              <h1>Your Reliable Weather App</h1>
             </div>
 
             <div className="search">
