@@ -4,6 +4,8 @@ import axios from "axios";
 import { FaTemperatureHigh } from "react-icons/fa";
 import { TiWeatherCloudy } from "react-icons/ti";
 import { BiWind } from "react-icons/bi";
+import { FaSearch } from "react-icons/fa";
+import Particles from "./Particles";
 
 function App() {
   const [weatherData, setWeatherData] = useState({});
@@ -22,62 +24,61 @@ function App() {
   };
 
   return (
-    <div className="wrapper">
+    
+    <div>
+       
+      <div className="wrapper">
+      <Particles />
+      <div className="search">
+        <input
+          placeholder="Search City..."
+          value={city}
+          onChange={(event) => setCity(event.target.value)}
+          onKeyPress={getWeather}
+        />
+      </div>
+
       <div className="info">
         {typeof weatherData.main === "undefined" ? (
-          <div className="empty">
-            <div className="name">
-              <h1>Your Reliable Weather App</h1>
-            </div>
-
-            <div className="search">
-              <input
-                placeholder="Search City..."
-                value={city}
-                onChange={(event) => setCity(event.target.value)}
-                onKeyPress={getWeather}
-              />
-            </div>
-            <p className="about">Discover any location weather...</p>
-          </div>
+          <div className="empty"></div>
         ) : (
           <div>
-            <div className="name">
-              <h1>Your Reliable Weather App</h1>
-            </div>
-
-            <div className="search">
-              <input
-                placeholder="Search City..."
-                value={city}
-                onChange={(event) => setCity(event.target.value)}
-                onKeyPress={getWeather}
-              />
-            </div>
             <div className="up">
               <h2>{weatherData.name}</h2>
 
-              <h2>{Math.round(weatherData.main.temp)}°C</h2>
+              <h5>
+              {new Date().getDate()}-{new Date().getMonth() + 1}-{new Date().getFullYear()}
+                
+              </h5>
+            </div>
+            <div className="mid">
+              <h1>{Math.round(weatherData.main.temp)}°C</h1>
 
-              <h2>{weatherData.weather[0].main}</h2>
+              <h3>{weatherData.weather[0].main}</h3>
             </div>
             <div className="bottom">
               <div className="sp">
-                <h2>
+                <h5>
                   <FaTemperatureHigh />{" "}
-                  {Math.round(weatherData.main.feels_like)}°C <span>Feel</span>
-                </h2>
+                  {Math.round(weatherData.main.feels_like)}°C 
+                </h5>
               </div>
 
               <div className="sp">
-                <h2>
-                  <BiWind /> {weatherData.wind.speed}  <span>Speed</span>
-                </h2>
+                <h5>
+                  <BiWind /> {weatherData.wind.speed} km/h
+                </h5>
               </div>
             </div>
           </div>
         )}
+        
       </div>
+
+
+      </div>
+   
+   
     </div>
   );
 }

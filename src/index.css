@@ -1,78 +1,66 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family:serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1e1e20;
-  background-image: url("https://images.pexels.com/photos/773953/pexels-photo-773953.jpeg ");
-overflow: hidden;
+  background-color: #08023c;
+
+  overflow: hidden;
   background-size: cover;
   background-position: center;
   height: 100vh;
   display: flex;
   justify-content: center;
+
+}
+#tsparticles {
+  position: relative;
+  z-index: -1;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-.wrapper {
-  display: inline-block;
-  width: 650px;
-  height: 600px;
-  background-color: #1e1e20;
-  padding: 40px;
-  margin-top: 5%;
-  border-radius: 60px;
-  color: #e5e5e5;
-}
-
-.name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color:#e5e5e5;
-  margin-bottom: 10px;
-}
-
-.search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .info {
-  
-  padding: 20px;
+  max-width: 600px;
+  border-radius: 20px;
+  margin: 20% auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  cursor: pointer;
 }
 
 input {
   border: 2px solid #e5e5e5;
-  width: 300px;
+  width: 700px;
   height: 40px;
-  border-radius: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 8%;
   padding-left: 50px;
   outline: none;
   font-size: 18px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 999;
 }
 
 .up {
-  display: inline;
+  display: flex;
   text-align: center;
-
+  color: #979797;
   font-size: 30px;
+  justify-content: space-between;
+}
+.mid {
+  display: inline;
+
+  text-align: center;
 }
 
 .bottom {
- display: flex;
- 
+  display: flex;
 
   justify-content: space-between;
   padding: 20px;
@@ -80,22 +68,24 @@ input {
   width: 500px;
   font-size: 20px;
 }
-span {
-  opacity: 0.5;
-  font-weight: 700;
-  font-size: 20px;
-  
-  
-  
+
+h1 {
+  font-size: 5rem;
+  margin: 0px;
 }
 
-.empty {
-  display: inline;
-  margin-top: 25%;
+h2 {
+  font-size: 30px;
+  margin-top: 27px;
 }
 
-.about{
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+h3 {
+  font-size: 17px;
+  margin: 0;
+  color: rgb(112, 112, 112);
+}
+h5 {
+  font-size: 17px;
+  margin-top: 39px;
+  color: #979797;
 }
